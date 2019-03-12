@@ -1,9 +1,14 @@
 package pack;
 
+/**
+ * @author BingelJ 
+ * 		   MAIN-Klasse der ersten Abgabeaufgabe des Moduls Programmieren
+ *         2 vom SS19 an der HS Mainz. Alle Anforderungen der Aufgabenstellung
+ *         sind erfuellt.
+ */
 public class Main {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		ProduktStueckliste fahrrad = new ProduktStueckliste("Fahrrad", 0, 1);
 		ProduktStueckliste rad = new ProduktStueckliste("Rad", 1, 2);
 		ProduktBlatt rahmen = new ProduktBlatt("Rahmen", 1, 1);
@@ -33,13 +38,10 @@ public class Main {
 		fahrrad.produktBearbeiten();
 		System.out.println();
 
-		// Alle Schrauben entfernen und Drucken erneut aufrufen.
-		fahrrad.entfernen("Schraube");
+		// Alle Schrauben entfernen und Drucken erneut aufrufen
+		fahrrad.entfernen("Rad");
 		fahrrad.drucken();
 
-		// Liste speichern
-		fahrrad.speichern();
-		SingletonDatei.closeInstance();
 	}
 
 }

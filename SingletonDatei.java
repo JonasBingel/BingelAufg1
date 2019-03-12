@@ -4,17 +4,21 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-// TOOD Ziel: Es soll immer nur ein Objekt gleichzeitig existieren, d.h. nur eine Methode soll gleichzeitig schreiben können;
-// final verhindert, dass die Klasse eine Oberklasse sein kann
-// Lazy  threadsafe oder bill pugh approach for files
-// Immer nur eine Datei in "C:\\Java\\stueckliste.txt" -> mittels print-Writer speichern
-// Ziel: Filelogger!
-
-//  Es darf immer nur eine Instanz, d.h. ein Print Writer vorliegen
+/**
+ * @author BingelJ Die Klasse ist Teil der Abgabeaufgabe 1 von Prog2 und
+ *         implementiert das Singleton-Lazy-Entwurfsmuster für ein
+ *         PrintWriter-Objekt. Die Klasse ist final, um Vererbung zu verhindern.
+ */
 public final class SingletonDatei {
+	// Die Klassenvariable ist die Referenzvariable für das PrintWriter-Objekt.
 	private static PrintWriter writer;
+	// Diese Konstante gibt den Pfad und Namen der Datei an.
 	private final String FILE_NAME = "D:\\stueckliste.txt"; // "C:\\Java\\stueckliste.txt";
 
+	/**
+	 * Privater Konstruktor, sodass er nur innerhalb dieser Klasse aufgerufen werden
+	 * kann. Ein neuer PrintWriter wird angelegt.
+	 */
 	private SingletonDatei() {
 		try {
 			FileWriter fw = new FileWriter(FILE_NAME);
@@ -24,9 +28,12 @@ public final class SingletonDatei {
 		}
 	}
 
-	// Lazy threadsafe Approach, um die langsame Performance durch Synchronization
-	// Overhead zu minimieren
-	// Ziel: Abfrage, ob Instance schon existiert, wenn nein -> Singleton erstellen
+	/**
+	 * Prueft, ob das PrintWriter-Objekt bereits existiert und ruft sonst den
+	 * Konstruktor auf, bevor es den PrintWriter returned.
+	 * 
+	 * @return PrintWriter-Instanz
+	 */
 	public static synchronized PrintWriter getInstance() {
 		if (writer == null) {
 			new SingletonDatei();
@@ -34,6 +41,10 @@ public final class SingletonDatei {
 		return writer;
 	}
 
+	/**
+	 * Die PrintWriter-Instanz wird geschlossen und der Referenzvarialbe null
+	 * zugewiesen.
+	 */
 	public static synchronized void closeInstance() {
 		writer.close();
 		writer = null;

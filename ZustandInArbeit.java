@@ -1,19 +1,41 @@
 package pack;
 
+/**
+ * @author BingelJ ZustandInArbeit erbt von der abstrakten Klasse Zustand und
+ *         ist ein konkreter Zustand des Zustand-Entwurfmusters.
+ */
 public class ZustandInArbeit extends Zustand {
-	public ZustandInArbeit(Produkt P) {
+	private Produkt kontext;
+
+	/**
+	 * Der Konstruktor setzt den Zustand des übergebenen Produkts auf die erstellte
+	 * Instanz und weist das Produkt dem Kontext zu.
+	 * 
+	 * @param p Produkt, dessen Zustand angepasst werden soll.
+	 */
+	public ZustandInArbeit(Produkt p) {
+		this.kontext = p;
+		p.setZustand(this);
+		System.out.println("Neuer Zustand: In Arbeit");
 
 	}
+
 	@Override
-	public void produktBearbeiten(final Produkt p) {
+	/**
+	 * Zustand wird gepumpt, d.h. bleibt in ZustandInArbeit und erzeugt eine
+	 * Konsolenausgaben.
+	 */
+	public void produktBearbeiten() {
 		System.out.println("Funktioniert: In Arbeit bleibt");
 
 	}
 
-	public void produktFreigeben(final Produkt p) {
-		p.setZustand(new ZustandFreigegeben(p));
-		System.out.println("Neuer Zustand: Freigegeben");
-
+	@Override
+	/**
+	 * Zustand wird geaendert in ZustandFreigegeben durch Aufruf des Konstruktors des konkreten Zustands.
+	 */
+	public void produktFreigeben() {
+		new ZustandFreigegeben(this.kontext);
 	}
 
 }

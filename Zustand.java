@@ -1,10 +1,19 @@
 package pack;
 
+/**
+ * @author BingelJ Abstrakte Klasse Zustand, die Teil des Zustand-Entwurfmusters
+ *         ist und die Methoden für die konkreten Zustände vorgibt.
+ */
 public abstract class Zustand {
 
-	public abstract void produktFreigeben(final Produkt p);
+	/**
+	 * Zustand wird geaendert in ZustandFreigegeben durch Aufruf des Konstruktors des konkreten Zustands.
+	 */
+	public abstract void produktFreigeben();
 
-	public abstract void produktBearbeiten(final Produkt p);
-	// TODO Auto-generated method stub
+	/**
+	 * Zustand wird geaendert in ZustandInArbeit durch Aufruf des Konstruktors des konkreten Zustands.
+	 */
+	public abstract void produktBearbeiten();
 
 }
