@@ -6,7 +6,6 @@ package pack;
  *
  */
 public class ZustandFreigegeben extends Zustand {
-	private Produkt kontext;
 
 	/**
 	 * Der Konstruktor setzt den Zustand des übergebenen Produkts auf die erstellte
@@ -16,7 +15,7 @@ public class ZustandFreigegeben extends Zustand {
 	 *          this gesetzt wird.
 	 */
 	public ZustandFreigegeben(Produkt p) {
-		this.kontext = p;
+		super(p);
 		p.setZustand(this);
 		System.out.println("Neuer Zustand: Freigegeben");
 
@@ -24,7 +23,7 @@ public class ZustandFreigegeben extends Zustand {
 
 	@Override
 	public void produktBearbeiten() {
-		new ZustandInArbeit(this.kontext);
+		new ZustandInArbeit(this.getKontext());
 	}
 
 	@Override

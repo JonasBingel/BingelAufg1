@@ -13,7 +13,7 @@ public final class SingletonDatei {
 	// Die Klassenvariable ist die Referenzvariable für das PrintWriter-Objekt.
 	private static PrintWriter writer;
 	// Diese Konstante gibt den Pfad und Namen der Datei an.
-	private final String FILE_NAME = "D:\\stueckliste.txt"; // "C:\\Java\\stueckliste.txt";
+	private final String FILE_NAME = "C:\\Java\\stueckliste.txt";
 
 	/**
 	 * Privater Konstruktor, sodass er nur innerhalb dieser Klasse aufgerufen werden

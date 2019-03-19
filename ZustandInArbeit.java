@@ -5,7 +5,6 @@ package pack;
  *         ist ein konkreter Zustand des Zustand-Entwurfmusters.
  */
 public class ZustandInArbeit extends Zustand {
-	private Produkt kontext;
 
 	/**
 	 * Der Konstruktor setzt den Zustand des übergebenen Produkts auf die erstellte
@@ -14,7 +13,7 @@ public class ZustandInArbeit extends Zustand {
 	 * @param p Produkt, dessen Zustand angepasst werden soll.
 	 */
 	public ZustandInArbeit(Produkt p) {
-		this.kontext = p;
+		super(p);
 		p.setZustand(this);
 		System.out.println("Neuer Zustand: In Arbeit");
 
@@ -32,10 +31,11 @@ public class ZustandInArbeit extends Zustand {
 
 	@Override
 	/**
-	 * Zustand wird geaendert in ZustandFreigegeben durch Aufruf des Konstruktors des konkreten Zustands.
+	 * Zustand wird geaendert in ZustandFreigegeben durch Aufruf des Konstruktors
+	 * des konkreten Zustands.
 	 */
 	public void produktFreigeben() {
-		new ZustandFreigegeben(this.kontext);
+		new ZustandFreigegeben(this.getKontext());
 	}
 
 }
