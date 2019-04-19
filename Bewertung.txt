@@ -1,0 +1,7 @@
+"Aufgabe 1: 19,75 Punkte
+
+- Es sollte Java 10 oder 11 nicht Java 8 eingesetzt werden (Hinweis)
+
+- Die Methode hinzuegen ist nur in der Stückliste nicht aber in der Oberklasse notwendig (-0,25)
+
+- Die manuelle Vergabe der Ebenennummer ist fehleranfällig (Hinweis)" 
