@@ -7,7 +7,7 @@ package pack;
 public class ZustandInArbeit extends Zustand {
 
 	/**
-	 * Der Konstruktor setzt den Zustand des übergebenen Produkts auf die erstellte
+	 * Der Konstruktor setzt den Zustand des Ã¼bergebenen Produkts auf die erstellte
 	 * Instanz und weist das Produkt dem Kontext zu.
 	 * 
 	 * @param p Produkt, dessen Zustand angepasst werden soll.
