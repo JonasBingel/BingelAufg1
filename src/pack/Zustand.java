@@ -2,7 +2,7 @@ package pack;
 
 /**
  * @author BingelJ Abstrakte Klasse Zustand, die Teil des Zustand-Entwurfmusters
- *         ist und die Methoden für die konkreten Zustände vorgibt.
+ *         ist und die Methoden fÃ¼r die konkreten ZustÃ¤nde vorgibt.
  */
 public abstract class Zustand {
 	private Produkt kontext;
