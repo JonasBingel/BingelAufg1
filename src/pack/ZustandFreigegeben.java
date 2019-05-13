@@ -8,7 +8,7 @@ package pack;
 public class ZustandFreigegeben extends Zustand {
 
 	/**
-	 * Der Konstruktor setzt den Zustand des übergebenen Produkts auf die erstellte
+	 * Der Konstruktor setzt den Zustand des Ã¼bergebenen Produkts auf die erstellte
 	 * Instanz und weist das Produkt dem Kontext zu.
 	 * 
 	 * @param p Produkt, das in Kontext gespeicheret wird und dessen Zustand auf
