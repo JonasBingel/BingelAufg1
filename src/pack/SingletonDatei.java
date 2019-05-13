@@ -6,11 +6,11 @@ import java.io.PrintWriter;
 
 /**
  * @author BingelJ Die Klasse ist Teil der Abgabeaufgabe 1 von Prog2 und
- *         implementiert das Singleton-Lazy-Entwurfsmuster für ein
+ *         implementiert das Singleton-Lazy-Entwurfsmuster fÃ¼r ein
  *         PrintWriter-Objekt. Die Klasse ist final, um Vererbung zu verhindern.
  */
 public final class SingletonDatei {
-	// Die Klassenvariable ist die Referenzvariable für das PrintWriter-Objekt.
+	// Die Klassenvariable ist die Referenzvariable fÃ¼r das PrintWriter-Objekt.
 	private static PrintWriter writer;
 	// Diese Konstante gibt den Pfad und Namen der Datei an.
 	private final String FILE_NAME = "C:\\Java\\stueckliste.txt";
