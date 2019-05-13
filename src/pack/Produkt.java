@@ -46,7 +46,7 @@ public abstract class Produkt {
 
 	/**
 	 * Standard-Implementierung der entfernen-Methode, die eine Exception wirft, da
-	 * nur Produktstuecklisten diese Methode verwenden können sollen.
+	 * nur Produktstuecklisten diese Methode verwenden kÃ¶nnen sollen.
 	 * 
 	 * @param produktMussWeg Name des Produkts, das entfernt werden soll.
 	 */
@@ -98,7 +98,7 @@ public abstract class Produkt {
 	public abstract String getKlassenBezeichnung();
 
 	/**
-	 * Methode liefert das Padding für ein Produkt, das anhand der Ebene berechnet
+	 * Methode liefert das Padding fÃ¼r ein Produkt, das anhand der Ebene berechnet
 	 * wird.
 	 * 
 	 * @return Padding, d.h. String mit bestimmter Anzahl von Blanks entsprechend
