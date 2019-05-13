@@ -59,7 +59,7 @@ public class ProduktStueckliste extends Produkt {
 
 	@Override
 	/**
-	 * Ueberschriebene Drucken-Methode, die zun‰chst drucken der Oberklasse aufruft
+	 * Ueberschriebene Drucken-Methode, die zun√§chst drucken der Oberklasse aufruft
 	 * und danach alle Elemente der stueckliste durchlaeuft und rekursiv drucken
 	 * aufruft.
 	 * 
